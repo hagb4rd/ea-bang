@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bang Search Router</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .search-container {
+      width: 100%;
+      max-width: 640px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.025em;
+      color: #38bdf8;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 0.5rem;
+      background-color: #1e293b;
+      padding: 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-form:focus-within {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+    }
+
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0.75rem 1.25rem;
+      font-size: 1.125rem;
+      color: #f8fafc;
+    }
+
+    .search-input::placeholder {
+      color: #64748b;
+    }
+
+    .search-button {
+      background-color: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 9999px;
+      padding: 0.75rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.15s ease-in-out;
+    }
+
+    .search-button:hover {
+      background-color: #7dd3fc;
+    }
+
+    .hint {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    .hint code {
+      background-color: #1e293b;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <h1>Search Router</h1>
+    <form action="/search" method="GET" class="search-form">
+      <input 
+        type="text" 
+        name="q" 
+        class="search-input" 
+        placeholder="e.g. deb nginx or w linux" 
+        autofocus 
+        required 
+        autocomplete="off"
+      />
+      <button type="submit" class="search-button">Search</button>
+    </form>
+    <p class="hint">Type <code>&lt;shortcut&gt; &lt;query&gt;</code> to jump directly to target engines.</p>
+  </div>
+
+</body>
+</html>

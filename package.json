@@ -1,0 +1,34 @@
+{
+  "name": "ea-bang",
+  "version": "1.0.0",
+  "description": "microservice+tiny frontend to resolve browser search engine shortcuts and redirect the query to corresponding search engine",
+  "keywords": [
+    "bang",
+    "search",
+    "shortcut",
+    "express",
+    "webservice",
+    "microservice"
+  ],
+  "bin": {
+    "ea-bang": "server.js"
+  },
+  "homepage": "https://github.com/hagb4rd/ea-bang#readme",
+  "bugs": {
+    "url": "https://github.com/hagb4rd/ea-bang/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hagb4rd/ea-bang.git"
+  },
+  "license": "MIT",
+  "author": "mcfuege@gmail.com",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
